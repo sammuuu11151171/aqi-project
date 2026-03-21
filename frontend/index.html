@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AQI Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🌍 AQI Monitoring System</h1>
+
+<div>
+    <input type="number" id="pm25" placeholder="PM2.5">
+    <input type="number" id="pm10" placeholder="PM10">
+    <input type="number" id="no2" placeholder="NO2">
+    <input type="number" id="co" placeholder="CO">
+
+    <button onclick="predict()">Predict AQI</button>
+</div>
+
+<h2 id="result"></h2>
+
+<h3>📊 Insights</h3>
+<p id="insights"></p>
+
+<canvas id="chart"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
