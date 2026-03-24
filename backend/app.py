@@ -25,7 +25,7 @@ def static_files(path):
 
 # ------------------ API ROUTES ------------------
 
-# 🔮 Prediction API
+# Prediction API
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.json['data']
@@ -49,7 +49,7 @@ def predict():
     })
 
 
-# 📊 Insights API
+# Insights API
 @app.route('/insights')
 def insights():
     avg_aqi = int(df['AQI'].mean())
@@ -61,7 +61,7 @@ def insights():
     })
 
 
-# 📈 Trend API
+# Trend API
 @app.route('/trend')
 def trend():
     trend_data = df.groupby('Date')['AQI'].mean().reset_index()
